@@ -2,7 +2,8 @@
 
 debug手势库， 多指连击
 
-##demo
+## Demo
+
 [点击demo查看](https://braisedcakes666.github.io/touch/index.html)
 
 ## Install
@@ -14,8 +15,8 @@ npm install finger-touch --save-dev
 ## Usage
 
 支持umd，cmd，amd等方式引入
-```javascript
 
+```javascript
 import { FingerTouch } from 'finger-touch'
 //或
 const { FingerTouch } = require('finger-touch')
@@ -23,17 +24,16 @@ const { FingerTouch } = require('finger-touch')
 //直接使用FingerTouch
 ```
 
-##Example
+## Example
 
 ```javascript
-
 FingerTouch(el, options, cb);
 
 FingerTouch('.feed', {
-	finger : 3,
-	number : 2
+    finger : 3,
+    number : 2
 }, (dom)=>{
-	//dom : 触发事件的dom元素
+    //dom : 触发事件的dom元素
 })
 
 //el可以传id,class,nodeName或dom节点等等
