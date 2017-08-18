@@ -1,9 +1,17 @@
 {
     "name": "finger-touch",
-    "version": "0.0.2",
+    "version": "0.0.3",
     "description": "手势库",
     "author": "BraisedCakes666 <1930003003@qq.com>",
     "main": "src/touch.js",
+	"repository": {
+        "type": "git",
+        "url": "git+https://github.com/BraisedCakes666/touch.git"
+    },
+    "bugs": {
+        "url": "https://github.com/BraisedCakes666/touch/issues"
+    },
+    "homepage": "https://github.com/BraisedCakes666/touch#readme",
     "scripts": {
         "dev": "node build/dev-server.js",
         "start": "node build/dev-server.js",
@@ -12,9 +20,6 @@
         "e2e": "node test/e2e/runner.js",
         "test": "npm run unit && npm run e2e",
         "lint": "eslint --ext .js,.vue src test/unit/specs test/e2e/specs"
-    },
-    "dependencies": {
-        "vue": "^2.3.3"
     },
     "devDependencies": {
         "art-template": "^4.12.1",

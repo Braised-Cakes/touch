@@ -5,35 +5,72 @@
 	<meta charset="utf-8">
 	<meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
 	<title>touch-finger</title>
-	<style>
-		body {
-			margin: 0;
-			padding: 0;
-			user-select: none;
-			-webket-user-select: none;
-		}
+	<script>
+		! function() {
+			var t = 100,
+				o = 750,
+				e = document.documentElement.clientWidth || window.innerWidth,
+				n = Math.max(Math.min(e, 480), 320),
+				h = 50;
+			320 >= n && (h = Math.floor(n / o * t * .99)), n > 320 && 362 >= n && (h = Math.floor(n / o * t * 1)), n > 362 && 375 >= n && (h = Math.floor(n / o * t * 1)), n > 375 && (h = Math.floor(n / o * t * .97)), document.querySelector("html").style.fontSize =
+				h + "px"
+		}();
 
-		div {
-			background-color: rgba(0, 0, 0, 0.25);
-			height: 300px;
-			margin: 20px 0;
-			text-align: center;
-			font-size: 30px;
-			cursor: pointer;
-			display: flex;
-			justify-content: center;
-			align-items: center;
+		function rem() {
+			var t = 100,
+				o = 750,
+				e = document.documentElement.clientWidth || window.innerWidth,
+				n = Math.max(Math.min(e, 480), 320),
+				h = 50;
+			320 >= n && (h = Math.floor(n / o * t * .99)), n > 320 && 362 >= n && (h = Math.floor(n / o * t * 1)), n > 362 && 375 >= n && (h = Math.floor(n / o * t * 1)), n > 375 && (h = Math.floor(n / o * t * .97)), document.querySelector("html").style.fontSize =
+				h + "px"
+		};
+		rem();
+		window.onresize = function() {
+			rem();
 		}
-	</style>
+	</script>
+	<link rel='stylesheet' href='https://mjs.sinaimg.cn/wap/project/homev8/8.0.51/homev8/homev8.min.css'>
+
+
+
 </head>
 
 
 <body>
+	<section class="s_card" id="j_card_yaowen" data-sudaclick="ls_c_yaowen">
+		<div class="guanggao1" data-name="第1个">
+			<a class="show m_f_a " href="https://sina.cn/" data-info="ad_none|-3|5|0|43|none|1503036568|0|-3|0|0|PDPS000000057683|3|211">
+				<h3 class="cm_tit">两指双击</h3>
+				<aside class="i_gx3_img_box">
+					<figure class="i_gx3_img_div i_gx3_img_div_solo"><img class="img_width finpic" src="https://d7.sinaimg.cn/pfpghc2/201708/17/70c155f3cf8d45ab9170bf642c1550a4.jpg" alt="还在玩假三国么，90后已集体沦陷此游戏"></figure>
+				</aside>
+				<blockquote class="cm_f_ic"><mark class="cm_mark">广告</mark><em class="m_f_con_n fr">2.8万<span class="m_f_con_ic icon_com"></span></em></blockquote>
+			</a>
+		</div>
+		<div class="guanggao2" data-name="第2个"><a class="m_f_a show " href="https://sina.cn/"><h3 class="cm_tit">两指双击</h3><aside class="i_gx3_img_box"><figure class="i_gx3_img_div"><img class="img_width finpic" src="https://d1.sinaimg.cn/pfpghc2/201708/18/598d15ccae1d4a5e8003c7fd39e73d42.jpg" alt="假如你在三国，诸葛亮的阵法你能破几个"></figure><figure class="i_gx3_img_div"><img class="img_width finpic" src="https://d6.sinaimg.cn/pfpghc2/201708/18/798a5d6e38074e1a8890e858f9d804ec.jpg" alt="假如你在三国，诸葛亮的阵法你能破几个"></figure><figure class="i_gx3_img_div"><img class="img_width finpic" src="https://d1.sinaimg.cn/pfpghc2/201708/18/2183da5bf6994325aa4ed27f035048e2.jpg" alt="假如你在三国，诸葛亮的阵法你能破几个"></figure></aside><blockquote class="cm_f_ic"><mark class="cm_mark">广告</mark><em class="m_f_con_n fr">7019<span class="m_f_con_ic icon_com"></span></em></blockquote></a></div>
+		<div class="guanggao3" data-name="第3个">
+			<a class="show m_f_a " href="https://sina.cn/" data-info="ad_none|-3|5|0|43|none|1503036568|0|-3|0|0|PDPS000000057683|3|211">
+				<h3 class="cm_tit">三指双击</h3>
+				<aside class="i_gx3_img_box">
+					<figure class="i_gx3_img_div i_gx3_img_div_solo"><img class="img_width finpic" src="https://d7.sinaimg.cn/pfpghc2/201708/17/70c155f3cf8d45ab9170bf642c1550a4.jpg" alt="还在玩假三国么，90后已集体沦陷此游戏"></figure>
+				</aside>
+				<blockquote class="cm_f_ic"><mark class="cm_mark">广告</mark><em class="m_f_con_n fr">2.8万<span class="m_f_con_ic icon_com"></span></em></blockquote>
+			</a>
+		</div>
+		<div class="guanggao4" data-name="第4个">
+			<a class="show m_f_a " href="https://sina.cn/" data-info="ad_none|-3|5|0|43|none|1503036568|0|-3|0|0|PDPS000000057683|3|211">
+				<h3 class="cm_tit">四指双击</h3>
+				<aside class="i_gx3_img_box">
+					<figure class="i_gx3_img_div i_gx3_img_div_solo"><img style="height:400px;" class="img_width finpic" src="https://d7.sinaimg.cn/pfpghc2/201708/17/70c155f3cf8d45ab9170bf642c1550a4.jpg" alt="还在玩假三国么，90后已集体沦陷此游戏"></figure>
+				</aside>
+				<blockquote class="cm_f_ic"><mark class="cm_mark">广告</mark><em class="m_f_con_n fr">2.8万<span class="m_f_con_ic icon_com"></span></em></blockquote>
+			</a>
+		</div>
+		<section class="s_card_it"><a href="http://news.sina.cn/?vt=4&amp;pos=108" data-sudaclick="card_more_yaowen"></a></section>
+	</section>
 
-	<div id="a1">两指三击</div>
-	<div id="a2">三指两击</div>
-
-
+	<!-- <script src="http://mjs.sinaimg.cn/wap/module/base/js/zepto.min.js"></script> -->
 </body>
 
 </html>

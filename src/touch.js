@@ -2,7 +2,7 @@ function getDom(el, dom) {
 	while (dom) {
 		if (typeof el == 'string') {
 			if (/#/.test(el)) {
-				if (dom.getAttribute('id') == el.replace(/#/, function() { return '' })) {
+				if (dom.getAttribute && dom.getAttribute('id') === el.replace(/#/, function() { return '' })) {
 					return dom;
 				}
 			} else if (/\./.test(el)) {
@@ -10,7 +10,7 @@ function getDom(el, dom) {
 					return dom;
 				}
 			} else {
-				if (dom.nodeName.toLowerCase() == el) {
+				if (dom.nodeName && dom.nodeName.toLowerCase() == el) {
 					return dom;
 				}
 			}
@@ -18,7 +18,7 @@ function getDom(el, dom) {
 			if (!el.length) {
 				el = [el];
 			}
-			for (var i = 0; i < el.length; i++) {
+			for (let i = 0; i < el.length; i++) {
 				if (el[i] == dom) {
 					return el[i]
 				}
@@ -26,25 +26,61 @@ function getDom(el, dom) {
 		}
 		dom = dom.parentNode;
 	}
+	return false;
 };
+
+
+function lengthTo0() {
+	timelist.length = 0;
+	fingerList.length = 0;
+}
 export default function(el, { finger = 2, number = 2, timer = 500 }, cb) {
+	var timelist = [];
+	var index1 = 0;
+	var fingerList = [];
+	var timeouttimer = {};
+	const minTimer = 60;
 	document.addEventListener('touchstart', function(ev) {
-		var dom = getDom(el, ev.target);
+		let dom = getDom(el, ev.target);
 		if (dom) {
+			var time = new Date().getTime();
+			timelist.push({
+				time: time,
+				dom: dom
+			});
 			if (ev.touches.length == finger) {
-				dom.fingerList = dom.fingerList || [];
-				dom.fingerList.push(new Date().getTime());
-				var list = dom.fingerList;
-				for (var i = 1; i < number; i++) {
-					if (list[list.length - i] - list[list.length - i - 1] < timer) {} else {
-						ev.preventDefault();
-						return false;
+				for (var i = 1; i < finger; i++) {
+					if (timelist[timelist.length - i].time - timelist[timelist.length - i - 1].time < minTimer) {
+						for (var attr in timeouttimer) {
+							clearTimeout(timeouttimer[attr])
+						}
+						break;
 					}
 				}
-				cb && cb(dom);
+				for (var i = 1; i < finger; i++) {
+					if (timelist[timelist.length - i].dom != timelist[timelist.length - i - 1].dom) {
+						for (var attr in timeouttimer) {
+							clearTimeout(timeouttimer[attr])
+						}
+						lengthTo0()
+						break;
+					}
+				}
+				timeouttimer[index1++] = setTimeout(function() {
+					fingerList.push(time);
+					for (var i = 1; i < number; i++) {
+						if (fingerList[fingerList.length - i] - fingerList[fingerList.length - i - 1] < timer) {} else {
+							ev.preventDefault();
+							return false;
+						}
+					}
+					cb && cb(dom)
+				}, minTimer);
 				ev.preventDefault();
 				return false;
 			}
+		} else {
+			lengthTo0()
 		}
 	});
 }
