@@ -29,7 +29,6 @@ function getDom(el, dom) {
 	return false;
 };
 
-
 function lengthTo0() {
 	timelist.length = 0;
 	fingerList.length = 0;

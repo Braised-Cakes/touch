@@ -1,6 +1,9 @@
 # finger-touch
 
-mini手势库， 多指连击
+debug手势库， 多指连击
+
+##demo
+[点击demo查看](https://braisedcakes666.github.io/touch/index.html)
 
 ## Install
 
@@ -8,20 +11,36 @@ mini手势库， 多指连击
 npm install finger-touch --save-dev
 ```
 
-## Example
+## Usage
+
+支持umd，cmd，amd等方式引入
+```javascript
+
+import { FingerTouch } from 'finger-touch'
+//或
+const { FingerTouch } = require('finger-touch')
+//或  
+//直接使用FingerTouch
+```
+
+##Example
 
 ```javascript
-new touch(el, options, cb);
-new touch('#list', {
-    finger : 2,
-    number : 3,
-    timer : 1000
-}, function(dom){});
-new touch('.item', {}, function(dom){});
-new touch('div', {}, function(dom){});
-new touch(document.getElementById('#list'), {}, function(dom){});
-new touch(document.querySelectorAll('.item'), {}, function(dom){});
-new touch($('#list'), {}, function(dom){});
+
+FingerTouch(el, options, cb);
+
+FingerTouch('.feed', {
+	finger : 3,
+	number : 2
+}, (dom)=>{
+	//dom : 触发事件的dom元素
+})
+
+//el可以传id,class,nodeName或dom节点等等
+
+FingerTouch('.feed', options, cb)
+FingerTouch(document.querySelectorAll('.feed'), options, cb)
+FingerTouch($('.feed'), options, cb)
 ```
 
 ## Options
