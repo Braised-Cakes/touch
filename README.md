@@ -6,6 +6,8 @@ debug手势库， 多指连击
 
 [点击demo查看](https://braisedcakes666.github.io/touch/index.html)
 
+![demo地址](./qrcode.png)
+
 ## Install
 
 ```bash
