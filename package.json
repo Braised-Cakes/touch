@@ -1,6 +1,6 @@
 {
     "name": "finger-touch",
-    "version": "0.0.7",
+    "version": "0.0.8",
     "description": "debug手势库",
     "author": "BraisedCakes666 <1930003003@qq.com>",
     "main": "bundle.js",
