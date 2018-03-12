@@ -4,7 +4,7 @@ debug手势库， 多指连击
 
 ## Demo
 
-[点击demo查看](https://braisedcakes666.github.io/touch/index.html)
+[点击demo查看](https://Braised-Cakes.github.io/touch/index.html)
 
 ![demo地址](./qrcode.png)
 

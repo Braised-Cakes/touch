@@ -1,15 +1,15 @@
 {
     "name": "finger-touch",
-    "version": "0.0.9",
+    "version": "0.0.10",
     "description": "debug手势库",
-    "author": "BraisedCakes666 <1930003003@qq.com>",
+    "author": "Braised-Cakes <1930003003@qq.com>",
     "main": "bundle.js",
     "repository": {
         "type": "git",
-        "url": "git+https://github.com/BraisedCakes666/touch.git"
+        "url": "git+https://github.com/Braised-Cakes/touch.git"
     },
     "bugs": {
-        "url": "https://github.com/BraisedCakes666/touch/issues"
+        "url": "https://github.com/Braised-Cakes/touch/issues"
     },
-    "homepage": "https://github.com/BraisedCakes666/touch#readme"
+    "homepage": "https://github.com/Braised-Cakes/touch#readme"
 }
